@@ -2,6 +2,13 @@
 .complication-list {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-around;
+	margin: 1em;
+}
+.complication-list>* {
+	padding: 0 15px;
+	font-weight: bold;
+	color: #000099;
 }
 </style>
 

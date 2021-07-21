@@ -148,8 +148,8 @@ const complications = [
 		hint: 'No dart guns in loadout.',
 	},
 	{
-		name: 'Loadout: Explosive Items Only (weapon slot still allowed)',
-		hint: 'Only allowed to bring explosive items in your item slots and ICA drops. You can still bring a weapon in your weapon slot. Includes breaching charges and anything else that creates a real explosion (no flash devices or goldbrick proximity mine, etc.).',
+		name: 'Loadout: Explosive Items Only',
+		hint: 'Only allowed to bring explosive items in your gear slots and smuggles. You can still bring a weapon in your weapon slot. Includes breaching charges and anything else that creates a real explosion (no flash devices or goldbrick proximity mine, etc.).',
 	},
 	{
 		name: 'Loadout: \'Legal\' Items Only',

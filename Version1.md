@@ -1,9 +1,10 @@
 <style>
 .complication-list {
-	display: flex;
 	margin: 1em;
+	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	align-items: center;
 }
 .complication-list>* {
 	margin: 10px 0;
@@ -34,10 +35,10 @@
 	<div><div id="complication6">Complication 6</div></div>
 </div>
 
-Presets: <button id="easy" onclick="setComplicationCount(2)">Easy</button> <button id="medium" onclick="setComplicationCount(4)">Medium</button> <button id="hard" onclick="setComplicationCount(6)">Hard</button>
+<div>Presets: <button id="easy" onclick="setComplicationCount(2)">Easy</button> <button id="medium" onclick="setComplicationCount(4)">Medium</button> <button id="hard" onclick="setComplicationCount(6)">Hard</button></div>
 
-Number of complications: <input id="complicationCount" type="number" value="6" min="1" max="6" onchange="generate()"><br>
-<button onclick="generate()">Generate Complications</button>
+<div>Number of complications: <input id="complicationCount" type="number" value="6" min="1" max="6" onchange="generate()"></div>
+<div><button onclick="generate()">Generate Complications</button></div>
 
 
 <script>

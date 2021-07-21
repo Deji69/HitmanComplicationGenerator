@@ -38,7 +38,7 @@ const complications = [
 	'No Item Throwing',
 	'No Tasers or EMP',
 	'Loadout: Explosive Items Only (weapon slot still allowed)',
-	'Loadout: 'Legal' Items Only',
+	'Loadout: \'Legal\' Items Only',
 ];
 
 function getRandomComplication() {

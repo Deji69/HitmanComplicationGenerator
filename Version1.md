@@ -15,8 +15,6 @@
 	<div id="complication3"></div>
 </div>
 
-<button onclick="generate">Generate New Complications</button>
-
 <script>
 const complications = [
 	'Default Loadout (ICA19, Fibre Wire, Coins)',
@@ -43,15 +41,14 @@ const complications = [
 	'Loadout: 'Legal' Items Only',
 ];
 
-const complication1 = document.getElementById('complication1');
-const complication2 = document.getElementById('complication2');
-const complication3 = document.getElementById('complication3');
-
 function getRandomComplication() {
 	return complications[Math.floor(Math.random() * complications.length)];
 }
 
 function generate() {
+	const complication1 = document.getElementById('complication1');
+	const complication2 = document.getElementById('complication2');
+	const complication3 = document.getElementById('complication3');
 	complication1.textContent = getRandomComplication();
 	complication2.textContent = getRandomComplication();
 	complication3.textContent = getRandomComplication();
@@ -59,3 +56,5 @@ function generate() {
 
 generate();
 </script>
+
+<button onclick="generate">Generate New Complications</button>

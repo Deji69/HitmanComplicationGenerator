@@ -137,7 +137,7 @@ const complications = [
 	{
 		name: 'Loadout: Explosive Items Only (weapon slot still allowed)',
 		hint: 'Only allowed to bring explosive items in your item slots and ICA drops. You can still bring a weapon in your weapon slot. Includes breaching charges and anything else that creates a real explosion (no flash devices or goldbrick proximity mine, etc.).',
-	}
+	},
 	{
 		name: 'Loadout: \'Legal\' Items Only',
 		hint: 'No bringing items that are illegal to hold. You may still bring micro devices and items that are only illegal to throw (e.g. micro taser, golf ball). Only applies to item slots, not the weapon slot.',

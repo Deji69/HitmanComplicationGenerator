@@ -86,7 +86,7 @@ function generate() {
 	for (let i = 0; i < picks.length; ++i) {
 		complicationEls[i].textContent = picks[i];
 	}
-	for (; i < complicationEls.length; ++i {
+	for (; i < complicationEls.length; ++i) {
 		complicationEls[i].textContent = '';
 	}
 }

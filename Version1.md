@@ -41,34 +41,42 @@ const complications = [
 	{
 		name: 'Default Start',
 		hint: 'NG default location or closest NG+ start',
+		exclude: ['Disguise Start Only', 'Suit Start Only'],
 	},
 	{
 		name: 'Disguise Start Only',
 		hint: 'No suit starting locations',
+		exclude: ['Default Start', 'Suit Start Only'],
 	},
 	{
 		name: 'Suit Start Only',
 		hint: 'Only suit starting locations.',
+		exclude: ['Disguise Start Only', 'Default Start'],
 	},
 	{
 		name: 'Free Disguises Only',
-		hint: 'No taking disguises from NPCs, only disguises lying around.'
+		hint: 'No taking disguises from NPCs, only disguises lying around.',
+		exclude: ['No Free Disguises', 'No Disguise Changes'],
 	},
 	{
 		name: 'No Free Disguises',
 		hint: 'Not allowed to use any disguises lying around, only ones from NPCs or starting location.',
+		exclude: ['Free Disguises Only', 'No Disguise Changes'],
 	},
 	{
 		name: 'No Disguise Changes',
 		hint: 'Remain in the disguise you start the level with.',
+		exclude: ['Free Disguises Only', 'No Free Disguises'],
 	},
 	{
 		name: 'No KOs',
 		hint: 'Do not pacify any NPC in any way, including targets.',
+		exclude: ['No Target KOs'],
 	},
 	{
-		name: 'No Target KOs (live kills only)',
+		name: 'No Target KOs',
 		hint: 'Do not KO the targets before killing.',
+		exclude: ['No KOs'],
 	},
 	{
 		name: 'No Shooting',
@@ -76,7 +84,7 @@ const complications = [
 	},
 	{
 		name: 'No Emetics',
-		hint: 'No making NPCs sick in any way.'
+		hint: 'No making NPCs sick in any way.',
 	},
 	{
 		name: 'No Dart Guns',
@@ -93,10 +101,12 @@ const complications = [
 	{
 		name: 'No Body Dumping',
 		hint: 'No hiding of bodies in cupboards or freezers etc. Hiding in grass is still fine.',
+		exclude: ['No Body Dragging'],
 	},
 	{
 		name: 'No Body Dragging',
 		hint: 'No dragging bodies of KO\'d or killed NPCs. Yes, this also means no hiding bodies unless they land in a hiding spot.',
+		exclude: ['No Body Dumping'],
 	},
 	{
 		name: 'No Loud Explosions (excludes breaching charges)',
@@ -109,14 +119,12 @@ const complications = [
 	{
 		name: 'No Throwing',
 		hint: 'No throwing any items, even at people\'s heads. Dropping or placing them is okay.',
+		exclude: ['No Placing or Dropping'],
 	},
 	{
 		name: 'No Placing or Dropping',
 		hint: 'No placing or dropping items or weapons. Throwing is okay. Enjoy the extra attention.',
-	},
-	{
-		name: 'Loadout: Default',
-		hint: 'ICA19, Fibre Wire, Coins, no ICA pickup',
+		exclude: ['No Throwing'],
 	},
 	{
 		name: 'Loadout: No Silenced Guns',

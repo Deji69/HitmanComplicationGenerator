@@ -128,14 +128,6 @@ const complications = [
 		exclude: ['No Throwing'],
 	},
 	{
-		name: 'Loadout: No Silenced Guns',
-		hint: 'Unsuppressed guns only. Includes dart guns.',
-	},
-	{
-		name: 'Loadout: No Automatic Weapons',
-		hint: 'No SMGs or F/A pistols in loadout. Find another way to get your doors open.',
-	},
-	{
 		name: 'Loadout: No ICA Titanium Crowbar or Lockpicks',
 		hint: 'Choose another way through locked doors or find a crowbar in the map.',
 	},
@@ -144,24 +136,35 @@ const complications = [
 		hint: 'No bringing those items that spark in your loadout.',
 	},
 	{
+		name: 'Loadout: No Silenced Guns',
+		hint: 'Unsuppressed guns only. Includes dart guns.',
+		exclude: ['Loadout: No Dart Guns'],
+	},
+	{
+		name: 'Loadout: No Automatic Guns',
+		hint: 'No SMGs or F/A pistols in loadout. Find another way to get your doors open.',
+	},
+	{
 		name: 'Loadout: No Dart Guns',
 		hint: 'No dart guns in loadout.',
+		exclude: ['Loadout: No Silenced Guns'],
+	},
+	{
+		name: 'Loadout: Frisk-Safe Guns Only',
+		hint: 'Only bring guns that are frisk safe. Applies concealed weapon, gear slots and smuggles. Using guns in the map is fine.',
 	},
 	{
 		name: 'Loadout: Explosive Items Only',
 		hint: 'Only allowed to bring explosive items in your gear slots and smuggles. You can still bring a weapon in your weapon slot. Includes breaching charges and anything else that creates a real explosion (no flash devices or goldbrick proximity mine, etc.).',
+		exclude: ['Loadout: Concealable Items Only', 'Loadout: \'Legal\' Items Only'],
 	},
 	{
-		name: 'Loadout: \'Legal\' Items Only',
-		hint: 'No bringing items that are illegal to hold. You may still bring micro devices and items that are only illegal to throw (e.g. micro taser, golf ball). Only applies to item slots, not the weapon slot.',
+		name: 'Loadout: Legal Items Only',
+		hint: 'No bringing items that are illegal to hold. You may still bring micro devices and items that are only illegal to throw (e.g. micro taser, golf ball). Does not apply to the concealed weapon slot.',
 	},
 	{
-		name: 'Loadout: Concealable Weapon Only',
-		hint: 'Only bring guns in the weapon slot or ICA drops that can pass frisk detection.',
-	},
-	{
-		name: 'Loadout: Concealable Items Only',
-		hint: 'Only bring items in the item slots or ICA drops that can pass frisk detection.',
+		name: 'Loadout: Illegal Items Only',
+		hint: 'Only bring items that are illegal to hold. Does not apply to the concealed weapon slot.',
 	},
 	{
 		name: 'Loadout: Audio Luring Items Only',
@@ -177,11 +180,11 @@ const complications = [
 	},
 	{
 		name: 'Loadout: No Gear',
-		hint: 'The only item you can bring will be via a smuggle point, not in your gear slots. A concealed weapon is not an \'item\'.'
+		hint: 'The only item you can bring will be via a smuggle point, not in your gear slots. A concealed weapon is not an \'item\'.',
 	},
 	{
 		name: 'Loadout: No Concealed Weapon',
-		hint: 'Cannot bring a weapon in the concealed weapon slot. Sacrifice a gear slot or go to an ICA drop if you need a gun.'
+		hint: 'Cannot bring a weapon in the concealed weapon slot. Sacrifice a gear slot or go to an ICA drop if you need a gun.',
 	},
 ];
 const complicationEls = [
@@ -248,3 +251,8 @@ function getComplicationCount() {
 
 generate();
 </script>
+
+<ul>
+	<li>Loadout complications only apply to loadout, not items in the map.</li>
+	<li>'Item' refers to both smuggled items and 'gear' slot items, including guns.</li>
+</li>

@@ -9,8 +9,14 @@
 	padding: 0 15px;
 	font-weight: bold;
 	color: #000099;
+	
 	text-decoration: underline;
 	text-decoration-style: dotted;
+}
+.complication-list>*>* {
+	padding: 8px;
+	background: #9999FF;
+	border-radius: 10px;
 }
 </style>
 
@@ -22,9 +28,6 @@
 	<div><div id="complication1">Complication 1</div></div>
 	<div><div id="complication2">Complication 2</div></div>
 	<div><div id="complication3">Complication 3</div></div>
-</div>
-
-<div class="complication-list">
 	<div><div id="complication4">Complication 4</div></div>
 	<div><div id="complication5">Complication 5</div></div>
 	<div><div id="complication6">Complication 6</div></div>

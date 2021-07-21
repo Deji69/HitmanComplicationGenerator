@@ -206,7 +206,7 @@ function generate() {
 	}
 	
 	for (let i = 0; i < complicationEls.length; ++i) {
-		complicationEls[i].textContent = i < count ? picks.length : '';
+		complicationEls[i].textContent = i < picks.length ? picks[i].name : '';
 	}
 }
 	

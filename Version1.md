@@ -219,8 +219,8 @@ function generate() {
 	}
 	
 	picks = picks.sort((a, b) => {
-		const av = a.startsWith('Loadout:');
-		const bv = b.startsWith('Loadout:');
+		const av = a.name.startsWith('Loadout:');
+		const bv = b.name.startsWith('Loadout:');
 		return av + -bv;
 	});
 	

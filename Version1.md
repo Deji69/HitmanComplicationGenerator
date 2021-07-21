@@ -3,7 +3,6 @@
 	display: flex;
 	margin: 1em;
 	flex-direction: row;
-	justify-content: space-around;
 	flex-wrap: wrap;
 }
 .complication-list>* {

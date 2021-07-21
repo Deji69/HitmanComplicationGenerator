@@ -32,7 +32,7 @@
 
 Default configuration: <button id="easy" onclick="setComplicationCount(2)">Easy</button> <button id="medium" onclick="setComplicationCount(4)">Easy</button> <button id="hard" onclick="setComplicationCount(6)">Hard</button>
 
-Number of complications: <input id="complicationCount" type="number" value="5" min="1" max="6" onchange="generate()"><br>
+Number of complications: <input id="complicationCount" type="number" value="6" min="1" max="6" onchange="generate()"><br>
 <button onclick="generate()">Generate Complications</button>
 
 
@@ -61,6 +61,14 @@ const complications = [
 	'Loadout: Explosive Items Only (weapon slot still allowed)',
 	'Loadout: \'Legal\' Items Only',
 ];
+const complicationEls = [
+	document.getElementById('complication1'),
+	document.getElementById('complication2'),
+	document.getElementById('complication3'),
+	document.getElementById('complication4'),
+	document.getElementById('complication5'),
+	document.getElementById('complication6'),
+];
 
 function getRandomComplication() {
 	return complications[Math.floor(Math.random() * complications.length)];
@@ -74,17 +82,12 @@ function generate() {
 		.sort((a, b) => a.sort - b.sort)
 		.map(({ value }) => value)
 		.slice(0, count);
-	const complicationEls = [
-		document.getElementById('complication1'),
-		document.getElementById('complication2'),
-		document.getElementById('complication3'),
-		document.getElementById('complication4'),
-		document.getElementById('complication5'),
-		document.getElementById('complication6'),
-	];
 	
 	for (let i = 0; i < picks.length; ++i) {
 		complicationEls[i].textContent = picks[i];
+	}
+	for (; i < complicationEls.length; ++i {
+		complicationEls[i].textContent = '';
 	}
 }
 	

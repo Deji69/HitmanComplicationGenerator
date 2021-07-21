@@ -58,9 +58,21 @@ function generate() {
 	const complication1 = document.getElementById('complication1');
 	const complication2 = document.getElementById('complication2');
 	const complication3 = document.getElementById('complication3');
-	complication1.textContent = getRandomComplication();
-	complication2.textContent = getRandomComplication();
-	complication3.textContent = getRandomComplication();
+	let c1 = getRandomComplication();
+	let c2 = c1;
+	let c3 = c1;
+	
+	do {
+		c2 = getRandomComplication();
+	} while (c2 === c1);
+	
+	do {
+		c3 = getRandomComplication();
+	} while (c3 === c1 || c3 === c2);
+	
+	complication1.textContent = c1;
+	complication2.textContent = c2;
+	complication3.textContent = c3;
 }
 
 generate();

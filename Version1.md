@@ -15,7 +15,7 @@
 
 <h1>Hitman Complication Generator</h1>
 
-<p>You can kill the target(s) with any method or disguise you choose, so long as it does not violate the restrictions...</p>
+<p>Complete the mission with the following restrictions. You can kill targets with any method or disguise that doesn't violate a restriction.</p>
 
 <div class="complication-list">
 	<div id="complication1">Complication 1</div>

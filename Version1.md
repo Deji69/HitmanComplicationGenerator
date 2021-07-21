@@ -1,22 +1,24 @@
 <style>
 .complication-list {
 	display: flex;
+	margin: 1em;
 	flex-direction: row;
 	justify-content: space-around;
-	margin: 1em;
+	flex-wrap: wrap;
 }
 .complication-list>* {
+	margin: 10px 0;
 	padding: 0 15px;
 	font-weight: bold;
 	color: #000099;
-	
 	text-decoration: underline;
 	text-decoration-style: dotted;
 }
 .complication-list>*>* {
 	padding: 8px;
-	background: #9999FF;
+	background: #E0E0FF;
 	border-radius: 10px;
+	white-space: nowrap;
 }
 </style>
 

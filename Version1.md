@@ -108,7 +108,7 @@ const complications = [
 	},
 	{
 		name: 'No Ladder or Pipe Climbing',
-		hint: 'Vaulting and ledge shimmying is okay because I'm not a sadist and I value your patience.',
+		hint: 'Vaulting and ledge shimmying is okay because I\'m not a sadist and I value your patience.',
 	},
 	{
 		name: 'No Throwing',

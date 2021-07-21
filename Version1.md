@@ -253,5 +253,6 @@ generate();
 
 <ul>
 	<li>Loadout complications only apply to loadout, not items in the map.</li>
+	<li>'Gear' refers to the gear slots in your loadout.</li>
 	<li>'Item' refers to both smuggled items and 'gear' slot items.</li>
 </ul>

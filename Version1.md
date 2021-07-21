@@ -9,6 +9,7 @@
 	padding: 0 15px;
 	font-weight: bold;
 	color: #000099;
+	text-decoration-style: dotted;
 }
 </style>
 
@@ -214,7 +215,13 @@ function generate() {
 	}
 	
 	for (let i = 0; i < complicationEls.length; ++i) {
-		complicationEls[i].textContent = i < picks.length ? picks[i].name : '';
+		if (i < picks.length) {
+			complicationEls[i].textContent = picks[i].name;
+			complicationEls[i].title = picks[i].hint;
+		} else {
+			complicationEls[i].textContent = '';
+			complicationEls[i].title = '';
+		}
 	}
 }
 	

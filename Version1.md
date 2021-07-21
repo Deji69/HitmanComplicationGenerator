@@ -210,7 +210,7 @@ function generate() {
 		const pick = picks[i];
 		
 		if (exclude.includes(pick.name)) {
-			picks.splice(i, 1);
+			picks.splice(i--, 1);
 		} else {
 			if (typeof pick.exclude !== 'undefined') {
 				exclude.push(...pick.exclude);

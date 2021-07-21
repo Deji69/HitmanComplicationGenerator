@@ -172,16 +172,16 @@ const complications = [
 		hint: 'No bringing briefcases in loadout or via agency pickups. Hidden stashes only.',
 	},
 	{
-		name: 'Loadout: No Stashes / Agency Pickups Only',
+		name: 'Loadout: No Stashes',
 		hint: 'Can only use Agency Pickups locations to smuggle in items, not stashes.',
 	},
 	{
-		name: 'Loadout: No Gear / Smuggle Item Only',
-		hint: 'The only item you can bring will be via a smuggle point, not in your gear slots.'
+		name: 'Loadout: No Gear',
+		hint: 'The only item you can bring will be via a smuggle point, not in your gear slots. A concealed weapon is not an \'item\'.'
 	},
 	{
-		name: 'Loadout: No Concealed Weapon or Gear Weapon / Smuggle Weapon Only',
-		hint: 'The only weapon you can bring will be via a smuggle point, not in your concealed weapon slot or your gear slot.'
+		name: 'Loadout: No Concealed Weapon',
+		hint: 'Cannot bring a weapon in the concealed weapon slot. Sacrifice a gear slot or go to an ICA drop if you need a gun.'
 	},
 ];
 const complicationEls = [

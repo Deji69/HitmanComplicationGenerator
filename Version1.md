@@ -17,12 +17,18 @@
 <p>You can kill the target(s) with any method or disguise you choose, so long as it does not violate the restrictions...</p>
 
 <div class="complication-list">
-	<div id="complication1">No Complication</div>
-	<div id="complication2">No Complication</div>
-	<div id="complication3">No Complication</div>
+	<div id="complication1">Complication 1</div>
+	<div id="complication2">Complication 2</div>
+	<div id="complication3">Complication 3</div>
 </div>
 
-<p>Easy: 1 complication, Medium: 2 complications, Hard: 3 complications</p>
+<div class="complication-list">
+	<div id="complication4">Complication 4</div>
+	<div id="complication5">Complication 5</div>
+	<div id="complication6">Complication 6</div>
+</div>
+
+<p>Easy: 1-2 complications, Medium: 3-4 complications, Hard: 5-6 complications</p>
 
 <script>
 const complications = [
@@ -55,27 +61,40 @@ function getRandomComplication() {
 }
 
 function generate() {
-	const complication1 = document.getElementById('complication1');
-	const complication2 = document.getElementById('complication2');
-	const complication3 = document.getElementById('complication3');
-	let c1 = getRandomComplication();
-	let c2 = c1;
-	let c3 = c1;
+	const count = getComplicationCount();
+	const choices = complications;
+	const picks = complications
+		.map((value) => ({ value, sort: Math.random() }))
+		.sort((a, b) => a.sort - b.sort)
+		.map(({ value }) => value)
+		.slice(0, count);
+	const complicationEls = [
+		document.getElementById('complication1'),
+		document.getElementById('complication2'),
+		document.getElementById('complication3'),
+		document.getElementById('complication4'),
+		document.getElementById('complication5'),
+		document.getElementById('complication6'),
+	];
 	
-	do {
-		c2 = getRandomComplication();
-	} while (c2 === c1);
+	for (let i = 0; i < picks.length; ++i) {
+		complicationEls[i].textContent = picks[i];
+	}
+}
 	
-	do {
-		c3 = getRandomComplication();
-	} while (c3 === c1 || c3 === c2);
+function setComplicationCount(number) {
+	const complicationCount = document.getElementById('complicationCount');
+	complicationCount.value = number;
+}
 	
-	complication1.textContent = c1;
-	complication2.textContent = c2;
-	complication3.textContent = c3;
+function getComplicationCount() {
+	return parseInt(document.getElementById('complicationCount').value);
 }
 
 generate();
 </script>
 
-<button onclick="generate()">Generate New Complications</button>
+Default configuration: <button id="easy" onclick="setComplicationCount(2)">Easy</button> <button id="medium" onclick="setComplicationCount(4)">Easy</button> <button id="hard" onclick="setComplicationCount(6)">Hard</button>
+
+Number of complications: <input id="complicationCount" type="number" value="5" min="1" max="6" onchange="generate()"><br>
+<button onclick="generate()">Generate Complications</button>

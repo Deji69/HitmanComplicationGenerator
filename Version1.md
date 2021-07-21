@@ -192,9 +192,8 @@ function generate() {
 		.map((value) => ({ value, sort: Math.random() }))
 		.sort((a, b) => a.sort - b.sort)
 		.map(({ value }) => value);
-	let i = 0;
 	
-	for (; i < picks.length && i < count; ++i) {
+	for (let i = 0; i < picks.length && i < count; ++i) {
 		const pick = picks[i];
 		
 		if (exclude.includes(picks.name)) {
@@ -206,7 +205,7 @@ function generate() {
 		}
 	}
 	
-	for (; i < complicationEls.length; ++i) {
+	for (let i = 0; i < complicationEls.length; ++i) {
 		complicationEls[i].textContent = i < count ? picks.length : '';
 	}
 }

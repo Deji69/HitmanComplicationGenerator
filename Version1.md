@@ -35,7 +35,7 @@
 
 <p>Easy: 1-2 complications, Medium: 3-4 complications, Hard: 5-6 complications</p>
 
-Presets: <button id="easy" onclick="setComplicationCount(2)">Easy</button> <button id="medium" onclick="setComplicationCount(4)">Easy</button> <button id="hard" onclick="setComplicationCount(6)">Hard</button>
+Presets: <button id="easy" onclick="setComplicationCount(2)">Easy</button> <button id="medium" onclick="setComplicationCount(4)">Medium</button> <button id="hard" onclick="setComplicationCount(6)">Hard</button>
 
 Number of complications: <input id="complicationCount" type="number" value="6" min="1" max="6" onchange="generate()"><br>
 <button onclick="generate()">Generate Complications</button>

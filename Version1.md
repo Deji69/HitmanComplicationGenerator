@@ -9,6 +9,7 @@
 	padding: 0 15px;
 	font-weight: bold;
 	color: #000099;
+	text-decoration: underline;
 	text-decoration-style: dotted;
 }
 </style>
@@ -18,15 +19,15 @@
 <p>Complete the mission with the following restrictions. You can kill targets with any method or disguise that doesn't violate a restriction.</p>
 
 <div class="complication-list">
-	<div id="complication1">Complication 1</div>
-	<div id="complication2">Complication 2</div>
-	<div id="complication3">Complication 3</div>
+	<div><div id="complication1">Complication 1</div></div>
+	<div><div id="complication2">Complication 2</div></div>
+	<div><div id="complication3">Complication 3</div></div>
 </div>
 
 <div class="complication-list">
-	<div id="complication4">Complication 4</div>
-	<div id="complication5">Complication 5</div>
-	<div id="complication6">Complication 6</div>
+	<div><div id="complication4">Complication 4</div></div>
+	<div><div id="complication5">Complication 5</div></div>
+	<div><div id="complication6">Complication 6</div></div>
 </div>
 
 <p>Easy: 1-2 complications, Medium: 3-4 complications, Hard: 5-6 complications</p>

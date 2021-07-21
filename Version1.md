@@ -205,11 +205,11 @@ function generate() {
 	for (let i = 0; i < picks.length && i < count; ++i) {
 		const pick = picks[i];
 		
-		if (exclude.includes(picks.name)) {
+		if (exclude.includes(pick.name)) {
 			picks.splice(i--);
 		} else {
-			if (typeof picks.exclude !== 'undefined' && picks.exclude) {
-				exclude.push(...picks.exclude);
+			if (typeof pick.exclude !== 'undefined') {
+				exclude.push(...pick.exclude);
 			}
 		}
 	}

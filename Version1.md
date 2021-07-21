@@ -22,6 +22,8 @@
 	<div id="complication3">No Complication</div>
 </div>
 
+<p>Easy: 1 complication, Medium: 2 complications, Hard: 3 complications</p>
+
 <script>
 const complications = [
 	'Default Loadout (ICA19, Fibre Wire, Coins)',

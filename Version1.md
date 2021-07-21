@@ -201,7 +201,7 @@ function generate() {
 	const count = getComplicationCount();
 	const choices = complications;
 	const exclude = [];
-	const picks = complications
+	let picks = complications
 		.map((value) => ({ value, sort: Math.random() }))
 		.sort((a, b) => a.sort - b.sort)
 		.map(({ value }) => value);
@@ -217,6 +217,12 @@ function generate() {
 			}
 		}
 	}
+	
+	picks = picks.sort((a, b) => {
+		const av = a.startsWith('Loadout:');
+		const bv = b.startsWith('Loadout:');
+		return av + -bv;
+	});
 	
 	for (let i = 0; i < complicationEls.length; ++i) {
 		if (i < picks.length) {

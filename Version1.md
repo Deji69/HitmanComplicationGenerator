@@ -105,7 +105,7 @@ const complications = [
 	},
 	{
 		name: 'No Body Dumping',
-		hint: 'No hiding of bodies in cupboards or freezers etc. Hiding in grass is still fine.',
+		hint: 'No hiding of bodies in cupboards or freezers etc. Hiding in grass is still fine. Push prompt on live NPCs is fine.',
 		exclude: ['No Body Dragging'],
 	},
 	{

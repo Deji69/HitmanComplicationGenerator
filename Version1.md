@@ -22,7 +22,7 @@
 }
 </style>
 
-<h1>Hitman Complication Generator</h1>
+<title>Hitman Complication Generator</title>
 
 <p>Complete the mission with the following restrictions. You can kill targets with any method or disguise that doesn't violate a restriction.</p>
 

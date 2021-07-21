@@ -1,4 +1,6 @@
-<style>
+<head>
+	<title>Hitman Complication Generator</title>
+	<style>
 .complication-list {
 	margin: 1em;
 	display: flex;
@@ -20,9 +22,7 @@
 	border-radius: 10px;
 	white-space: nowrap;
 }
-</style>
-
-<title>Hitman Complication Generator</title>
+</style></head>
 
 <p>Complete the mission with the following restrictions. You can kill targets with any method or disguise that doesn't violate a restriction.</p>
 

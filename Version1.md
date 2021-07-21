@@ -92,10 +92,6 @@ const complications = [
 		hint: 'No making NPCs sick in any way.',
 	},
 	{
-		name: 'No Dart Guns',
-		hint: 'No dart guns in loadout.',
-	},
-	{
 		name: 'No Falling Object Kills',
 		hint: 'No killing targets with chandeliers or other falling objects.',
 	},
@@ -146,6 +142,10 @@ const complications = [
 	{
 		name: 'Loadout: No Tasers or EMP',
 		hint: 'No bringing those items that spark in your loadout.',
+	},
+	{
+		name: 'Loadout: No Dart Guns',
+		hint: 'No dart guns in loadout.',
 	},
 	{
 		name: 'Loadout: Explosive Items Only (weapon slot still allowed)',

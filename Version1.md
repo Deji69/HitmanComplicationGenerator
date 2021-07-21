@@ -218,6 +218,8 @@ function generate() {
 		}
 	}
 	
+	picks.splice(count);
+	
 	picks = picks.sort((a, b) => {
 		const av = a.name.startsWith('Loadout:');
 		const bv = b.name.startsWith('Loadout:');

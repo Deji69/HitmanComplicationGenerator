@@ -10,9 +10,9 @@
 <p>You can kill the target(s) with any method or disguise you choose, so long as it does not violate the restrictions...</p>
 
 <div class="complication-list">
-	<div id="complication1"></div>
-	<div id="complication2"></div>
-	<div id="complication3"></div>
+	<div id="complication1">No Complication</div>
+	<div id="complication2">No Complication</div>
+	<div id="complication3">No Complication</div>
 </div>
 
 <script>

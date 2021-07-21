@@ -100,7 +100,7 @@ const complications = [
 	},
 	{
 		name: 'No Body Dragging',
-		hint: 'No dragging bodies of KO'd or killed NPCs. Yes, this also means no hiding bodies unless they land in a hiding spot.',
+		hint: 'No dragging bodies of KO\'d or killed NPCs. Yes, this also means no hiding bodies unless they land in a hiding spot.',
 	},
 	{
 		name: 'No Loud Explosions (excludes breaching charges)',

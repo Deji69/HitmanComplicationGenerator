@@ -196,7 +196,7 @@ function generate() {
 	for (let i = 0; i < picks.length && i < count; ++i) {
 		const pick = picks[i];
 		
-		if (exclude.contains(picks.name)) {
+		if (exclude.includes(picks.name)) {
 			picks.splice(i--);
 		} else {
 			if (typeof picks.exclude !== 'undefined' && picks.exclude) {

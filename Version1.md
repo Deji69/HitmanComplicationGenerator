@@ -156,7 +156,6 @@ const complications = [
 	{
 		name: 'Loadout: Explosive Items Only',
 		hint: 'Only allowed to bring explosive items in your gear slots and smuggles. You can still bring a weapon in your weapon slot. Includes breaching charges and anything else that creates a real explosion (no flash devices or goldbrick proximity mine, etc.).',
-		exclude: ['Loadout: Concealable Items Only', 'Loadout: \'Legal\' Items Only'],
 	},
 	{
 		name: 'Loadout: Legal Items Only',
@@ -254,5 +253,5 @@ generate();
 
 <ul>
 	<li>Loadout complications only apply to loadout, not items in the map.</li>
-	<li>'Item' refers to both smuggled items and 'gear' slot items, including guns.</li>
-</li>
+	<li>'Item' refers to both smuggled items and 'gear' slot items.</li>
+</ul>

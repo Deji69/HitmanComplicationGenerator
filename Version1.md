@@ -76,7 +76,7 @@ const complications = [
 	},
 	{
 		name: 'No Shooting',
-		hint: 'Bringing a weapon is okay, but you're not allowed to fire it.',
+		hint: 'Bringing a weapon is okay, but you\'re not allowed to fire it.',
 	},
 	{
 		name: 'No Emetics',

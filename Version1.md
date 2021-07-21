@@ -192,8 +192,9 @@ function generate() {
 		.map((value) => ({ value, sort: Math.random() }))
 		.sort((a, b) => a.sort - b.sort)
 		.map(({ value }) => value);
+	let i = 0;
 	
-	for (let i = 0; i < picks.length && i < count; ++i) {
+	for (; i < picks.length && i < count; ++i) {
 		const pick = picks[i];
 		
 		if (exclude.includes(picks.name)) {

@@ -39,10 +39,6 @@ Number of complications: <input id="complicationCount" type="number" value="6" m
 <script>
 const complications = [
 	{
-		name: 'Default Loadout',
-		hint: 'ICA19, Fibre Wire, Coins, no ICA pickup',
-	},
-	{
 		name: 'Default Start',
 		hint: 'NG default location or closest NG+ start',
 	},
@@ -117,6 +113,10 @@ const complications = [
 	{
 		name: 'No Placing or Dropping',
 		hint: 'No placing or dropping items or weapons. Throwing is okay. Enjoy the extra attention.',
+	},
+	{
+		name: 'Loadout: Default',
+		hint: 'ICA19, Fibre Wire, Coins, no ICA pickup',
 	},
 	{
 		name: 'Loadout: No Silenced Guns',

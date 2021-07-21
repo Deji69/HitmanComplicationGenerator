@@ -16,7 +16,7 @@
 }
 .complication-list>*>* {
 	padding: 8px;
-	background: #E0E0FF;
+	background: #E0E9FF;
 	border-radius: 10px;
 	white-space: nowrap;
 }

@@ -66,4 +66,4 @@ function generate() {
 generate();
 </script>
 
-<button onclick="generate">Generate New Complications</button>
+<button onclick="generate()">Generate New Complications</button>

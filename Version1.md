@@ -136,6 +136,14 @@ const complications = [
 		hint: 'No bringing those items that spark in your loadout.',
 	},
 	{
+		name: 'Loadout: No Syringes',
+		hint: 'No bringing syringe poison items in your loadout.',
+	},
+	{
+		name: 'Loadout: No Consumed Poisons',
+		hint: 'No bringing consumed poison items in your loadout.',
+	},
+	{
 		name: 'Loadout: No Silenced Guns',
 		hint: 'Unsuppressed guns only. Includes dart guns.',
 		exclude: ['Loadout: No Dart Guns'],

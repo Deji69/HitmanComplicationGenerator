@@ -128,6 +128,10 @@ const complications = [
 		exclude: ['No Throwing'],
 	},
 	{
+		name: 'Suit/Disguise Retrieval',
+		hint: 'Leave in the same suit you started in. If you started in a disguise, any identical disguise is acceptable.',
+	},
+	{
 		name: 'Loadout: No ICA Titanium Crowbar or Lockpicks',
 		hint: 'Choose another way through locked doors or find a crowbar in the map.',
 	},

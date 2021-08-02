@@ -8,7 +8,7 @@
 	flex-wrap: wrap;
 	align-items: center;
 }
-.complication-list>* {
+.complication-list>*,#complication-list>* {
 	margin: 10px 0;
 	padding: 0 15px;
 	font-weight: bold;
@@ -268,3 +268,16 @@ generate();
 	<li>'Gear' refers to the gear slots in your loadout.</li>
 	<li>'Item' refers to both smuggled items and 'gear' slot items.</li>
 </ul>
+
+<h4>Possible Complications</h4>
+<ul id="complication-list"></ul>
+
+<script>
+const ul = document.getElementById('complication-list');
+for (let k in complications) {
+	let li = document.createElement('li');
+	li.textContent = complications[k].name;
+	li.title = complication[k].hint;
+	ul.appendChild(li);
+}
+</script>

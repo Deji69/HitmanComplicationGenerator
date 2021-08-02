@@ -277,7 +277,7 @@ const ul = document.getElementById('complication-list');
 for (let k in complications) {
 	let li = document.createElement('li');
 	li.textContent = complications[k].name;
-	li.title = complication[k].hint;
+	li.title = complications[k].hint;
 	ul.appendChild(li);
 }
 </script>

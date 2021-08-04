@@ -232,6 +232,17 @@ const complicationEls = [
 function getRandomComplication() {
 	return complications[Math.floor(Math.random() * complications.length)];
 }
+	
+function renderComplicationList() {
+	const ul = document.getElementById('complication-list');
+	ul.innerHTML = '';
+	for (let k in complications) {
+		let li = document.createElement('li');
+		li.textContent = complications[k].name;
+		li.title = complications[k].hint;
+		ul.appendChild(li);
+	}
+}
 
 function generate() {
 	const count = getComplicationCount();
@@ -239,6 +250,9 @@ function generate() {
 	const loadout = getLoadoutEnabled();
 	const choices = complications;
 	const exclude = [];
+	
+	renderComplicationList();
+	
 	let picks = complications
 		.map((value) => ({ value, sort: Math.random() }))
 		.sort((a, b) => a.sort - b.sort)
@@ -308,11 +322,5 @@ generate();
 </div>
 
 <script>
-const ul = document.getElementById('complication-list');
-for (let k in complications) {
-	let li = document.createElement('li');
-	li.textContent = complications[k].name;
-	li.title = complications[k].hint;
-	ul.appendChild(li);
-}
+renderComplicationList();
 </script>

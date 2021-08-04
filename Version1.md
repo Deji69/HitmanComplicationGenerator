@@ -24,7 +24,7 @@
 }
 </style></head>
 
-<p>Complete the mission with the following restrictions. You can kill targets with any method or disguise that doesn't violate a restriction.</p>
+<p class="info">Complete the mission with the following restrictions. You can kill targets with any method or disguise that doesn't violate a restriction.</p>
 
 <div class="complication-list">
 	<div><div id="complication1">Complication 1</div></div>
@@ -35,10 +35,12 @@
 	<div><div id="complication6">Complication 6</div></div>
 </div>
 
+<div class="controls">
 <div>Presets: <button id="easy" onclick="setComplicationCount(2)">Easy</button> <button id="medium" onclick="setComplicationCount(4)">Medium</button> <button id="hard" onclick="setComplicationCount(6)">Hard</button></div>
 
 <div>Number of complications: <input id="complicationCount" type="number" value="6" min="1" max="6" onchange="generate()"></div>
 <div><button onclick="generate()">Generate Complications</button></div>
+</div>
 
 
 <script>
@@ -263,6 +265,8 @@ function getComplicationCount() {
 generate();
 </script>
 
+
+<div class="info">
 <ul>
 	<li>Loadout complications only apply to loadout, not items in the map.</li>
 	<li>'Gear' refers to the gear slots in your loadout.</li>
@@ -271,6 +275,7 @@ generate();
 
 <h4>Possible Complications</h4>
 <ul id="complication-list"></ul>
+</div>
 
 <script>
 const ul = document.getElementById('complication-list');

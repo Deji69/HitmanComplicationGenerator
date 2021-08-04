@@ -36,10 +36,11 @@
 </div>
 
 <div class="controls">
-<div>Presets: <button id="easy" onclick="setComplicationCount(2)">Easy</button> <button id="medium" onclick="setComplicationCount(4)">Medium</button> <button id="hard" onclick="setComplicationCount(6)">Hard</button></div>
-
-<div>Number of complications: <input id="complicationCount" type="number" value="6" min="1" max="6" onchange="generate()"></div>
-<div><button onclick="generate()">Generate Complications</button></div>
+	<div>Presets: <button id="easy" onclick="setComplicationCount(2)">Easy</button> <button id="medium" onclick="setComplicationCount(4)">Medium</button> <button id="hard" onclick="setComplicationCount(6)">Hard</button></div>
+	<div>Number of complications: <input id="complicationCount" type="number" value="6" min="1" max="6" onchange="generate()"></div>
+	<div>Loadout: <input id="enableLoadout" type="checkbox" onchange="generate()"></div>
+	<div>Objectives: <input id="enableObjectives" type="checkbox" onchange="generate()"></div>
+	<div><button onclick="generate()">Generate Complications</button></div>
 </div>
 
 
@@ -172,33 +173,51 @@ const complications = [
 		name: 'Loadout: Explosive Items Only',
 		hint: 'Only allowed to bring explosive items in your gear slots and smuggles. You can still bring a weapon in your weapon slot. Includes breaching charges and anything else that creates a real explosion (no flash devices or goldbrick proximity mine, etc.).',
 	},
-	{
-		name: 'Loadout: Legal Items Only',
-		hint: 'No bringing items that are illegal to hold. You may still bring micro devices and items that are only illegal to throw (e.g. micro taser, golf ball). Does not apply to the concealed weapon slot.',
-	},
-	{
-		name: 'Loadout: Illegal Items Only',
-		hint: 'Only bring items that are illegal to hold. Does not apply to the concealed weapon slot.',
-	},
-	{
+	/*{
 		name: 'Loadout: Audio Luring Items Only',
 		hint: 'Only bring items that will casually lure NPCs via audio when placed or detonated e.g. audio devices, flash phone, napoleon, goldbrick proximity mine (snail). Includes breaching charge! You don\'t have to lure anyone with them though.',
+	},*/
+	{
+		name: 'Loadout: No Illegal Items',
+		hint: 'No bringing items that are illegal to hold. You may still bring micro devices and items that are only illegal to throw (e.g. micro taser, golf ball). Does not apply to the concealed weapon slot.',
+		exclude: ['Loadout: No Legal Items'],
 	},
 	{
-		name: 'Loadout: No Briefcases or Agency Pickups',
-		hint: 'No bringing briefcases in loadout or via agency pickups. Hidden stashes only.',
+		name: 'Loadout: No Legal Items',
+		hint: 'Only bring items that are illegal to hold. Does not apply to the concealed weapon slot.',
+		exclude: ['Loadout: No Illegal Items'],
 	},
 	{
-		name: 'Loadout: No Stashes',
-		hint: 'Can only use Agency Pickups locations to smuggle in items, not stashes.',
+		name: 'Loadout: No Agency Pickup / Stash Only',
+		hint: 'Only use stash smuggles, not agency pickups.',
+		exclude: ['Loadout: No Stash / Agency Pickup Only'],
+	},
+	{
+		name: 'Loadout: No Stash / Agency Pickup Only',
+		hint: 'Only use agency pickup smuggles, not stashes.',
+		exclude: ['Loadout: No Agency Pickup / Stash Only'],
+	},
+	{
+		name: 'Loadout: No Gear Briefcase',
+		hint: 'No bringing a briefcase in the Gear slot.',
+	},
+	{
+		name: 'Loadout: One Gear Slot',
+		hint: 'Only allowed a single \'Gear\' slot item, leave the other one empty.',
+		exclude: ['Loadout: No Gear'],
 	},
 	{
 		name: 'Loadout: No Gear',
 		hint: 'The only item you can bring will be via a smuggle point, not in your gear slots. A concealed weapon is not an \'item\'.',
+		exclude: ['Loadout: One Gear Slot'],
 	},
 	{
 		name: 'Loadout: No Concealed Weapon',
 		hint: 'Cannot bring a weapon in the concealed weapon slot. Sacrifice a gear slot or go to an ICA drop if you need a gun.',
+	},
+	{
+		name: 'Objective: Delete Recordings',
+		hint: '',
 	},
 ];
 const complicationEls = [
@@ -216,6 +235,8 @@ function getRandomComplication() {
 
 function generate() {
 	const count = getComplicationCount();
+	const objectives = getObjectivesEnabled();
+	const loadout = getLoadoutEnabled();
 	const choices = complications;
 	const exclude = [];
 	let picks = complications
@@ -226,7 +247,7 @@ function generate() {
 	for (let i = 0; i < picks.length && i < count; ++i) {
 		const pick = picks[i];
 		
-		if (exclude.includes(pick.name)) {
+		if (exclude.includes(pick.name) || (!objectives && pick.name.startsWith('Objective:')) || (!loadout && pick.name.startsWith('Loadout:'))) {
 			picks.splice(i--, 1);
 		} else {
 			if (typeof pick.exclude !== 'undefined') {
@@ -261,6 +282,14 @@ function setComplicationCount(number) {
 	
 function getComplicationCount() {
 	return parseInt(document.getElementById('complicationCount').value);
+}
+	
+function getObjectivesEnabled() {
+	return document.getElementById('enableObjectives').checked;
+}
+	
+function getLoadoutEnabled() {
+	return document.getElementById('enableLoadout').checked;
 }
 
 generate();

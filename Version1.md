@@ -38,7 +38,7 @@
 <div class="controls">
 	<div>Presets: <button id="easy" onclick="setComplicationCount(2)">Easy</button> <button id="medium" onclick="setComplicationCount(4)">Medium</button> <button id="hard" onclick="setComplicationCount(6)">Hard</button></div>
 	<div>Number of complications: <input id="complicationCount" type="number" value="6" min="1" max="6" onchange="generate()"></div>
-	<div>Loadout: <input id="enableLoadout" type="checkbox" onchange="generate()"></div>
+	<div>Loadout: <input id="enableLoadout" type="checkbox" onchange="generate()" checked></div>
 	<div>Objectives: <input id="enableObjectives" type="checkbox" onchange="generate()"></div>
 	<div><button onclick="generate()">Generate Complications</button></div>
 </div>

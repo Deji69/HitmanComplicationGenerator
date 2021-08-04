@@ -43,6 +43,16 @@
 	<div><button onclick="generate()">Generate Complications</button></div>
 </div>
 
+<div class="info">
+	<ul>
+		<li>Loadout complications only apply to loadout, not items in the map.</li>
+		<li>'Gear' refers to the gear slots in your loadout.</li>
+		<li>'Item' refers to both smuggled items and 'gear' slot items.</li>
+	</ul>
+
+	<h4>Possible Complications</h4>
+	<ul id="complication-list"></ul>
+</div>
 
 <script>
 const complications = [
@@ -273,8 +283,8 @@ function generate() {
 	picks.splice(count);
 	
 	picks = picks.sort((a, b) => {
-		const av = a.name.startsWith('Loadout:');
-		const bv = b.name.startsWith('Loadout:');
+		const av = a.name.startsWith('Objective:') ? 2 : a.name.startsWith('Loadout:') ? 1 : 0;
+		const bv = b.name.startsWith('Objective:') ? 2 : b.name.startsWith('Loadout:') ? 1 : 0;
 		return av + -bv;
 	});
 	
@@ -307,20 +317,4 @@ function getLoadoutEnabled() {
 }
 
 generate();
-</script>
-
-
-<div class="info">
-<ul>
-	<li>Loadout complications only apply to loadout, not items in the map.</li>
-	<li>'Gear' refers to the gear slots in your loadout.</li>
-	<li>'Item' refers to both smuggled items and 'gear' slot items.</li>
-</ul>
-
-<h4>Possible Complications</h4>
-<ul id="complication-list"></ul>
-</div>
-
-<script>
-renderComplicationList();
 </script>

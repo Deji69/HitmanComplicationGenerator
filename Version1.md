@@ -73,7 +73,7 @@ const complications = [
 	{
 		name: 'No Disguise Changes',
 		hint: 'Remain in the disguise you start the level with.',
-		exclude: ['Free Disguises Only', 'No Free Disguises'],
+		exclude: ['Free Disguises Only', 'No Free Disguises', 'Suit/Disguise Retrieval'],
 	},
 	{
 		name: 'No KOs',
@@ -132,6 +132,7 @@ const complications = [
 	{
 		name: 'Suit/Disguise Retrieval',
 		hint: 'Leave in the same suit you started in. If you started in a disguise, any identical disguise is acceptable.',
+		exclude: ['No Disguise Changes'],
 	},
 	{
 		name: 'Loadout: No ICA Titanium Crowbar or Lockpicks',

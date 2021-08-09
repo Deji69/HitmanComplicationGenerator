@@ -89,7 +89,17 @@ const complications = [
 	{
 		name: 'No KOs',
 		hint: 'Do not pacify any NPC in any way, including targets.',
-		exclude: ['No Target KOs'],
+		exclude: ['No Female KOs', 'No Target KOs'],
+	},
+	{
+		name: 'No Female KOs',
+		hint: 'Do not pacify any female NPC in any way, including targets.',
+		exclude: ['No KOs', 'No Male KOs', 'No Target KOs'],
+	},
+	{
+		name: 'No Male KOs',
+		hint: 'Do not pacify any male NPC in any way, including targets.',
+		exclude: ['No KOs', 'No Female KOs', 'No Target KOs'],
 	},
 	{
 		name: 'No Target KOs',
@@ -97,12 +107,12 @@ const complications = [
 		exclude: ['No KOs'],
 	},
 	{
-		name: 'No Shooting',
-		hint: 'Bringing a weapon is okay, but you\'re not allowed to fire it.',
-	},
-	{
 		name: 'No Emetics',
 		hint: 'No making NPCs sick in any way.',
+	},
+	{
+		name: 'No Live Non-Lethal Shots (Panic)',
+		hint: 'Body shots on NPCs are allowed only when they are unconscious or when the shot kills them, so no using it for panic strats (3 shot still ok).',
 	},
 	{
 		name: 'No Falling Object Kills',

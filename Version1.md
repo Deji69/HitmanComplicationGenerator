@@ -227,7 +227,19 @@ const complications = [
 	},
 	{
 		name: 'Objective: Delete Recordings',
-		hint: '',
+		hint: 'Destroy the recordings by shooting or interacting with the recorder.',
+	},
+	{
+		name: 'Objective: Raise Alarm',
+		hint: 'Trigger an alarm using a fire alarm panel.',
+	},
+	{
+		name: 'Objective: Steal a Knife',
+		hint: 'Steal any kind of knife from the level and exit with it.',
+	},
+	{
+		name: 'Objective: Steal a Large Lethal Melee',
+		hint: 'Steal any a large unconcealable lethal melee object in the level and exit with it.',
 	},
 ];
 const complicationEls = [
